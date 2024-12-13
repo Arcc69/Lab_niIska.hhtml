@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: orchid;
+        }
+
+        .card {
+            background-color: plum;
+            padding: 20px 30px;
+            border-radius: 15px;
+            border: 3px solid #ff6347; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .greeting {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: mediumvioletred;
+        }
+
+        .toggle-button {
+            background-color: mediumvioletred;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: hotpink;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: black;
+            text-align: left; 
+            display: none;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="pictureniiska.jpg" alt="Greeting Image">
+        <h1 id="greeting" class="greeting"> MY FAVORITE MA'AM ROAN🫶</h1>
+        <p id="message" class="message">
+            I just wanted to thank you ma'am Roan for your support and guidance this semester. I really hope you'll be my teacher again next semester. Your dedication and encouragement have truly inspired me. Advance Merry Christmas and Happy New Year ma'am. Wishing you a wonderful and restful break!🥰
+        </p>
+        <button id="toggleButton" class="toggle-button" onclick="toggleMessage()">OPEN</button>
+    </div>
+
+    <script>
+        function toggleMessage() {
+            const message = document.getElementById('message');
+            const button = document.getElementById('toggleButton');
+            const greeting = document.getElementById('greeting');
+
+            if (message.style.display === 'block') {
+                message.style.display = 'none';
+                button.textContent = 'OPEN';
+                greeting.textContent = "MY FAVORITE MA'AM ROAN!🫶";
+            } else {
+                message.style.display = 'block';
+                button.textContent = 'CLOSE';
+                greeting.textContent = "THANK YOU SO MUCH MA'AM!";
+            }
+        }
+    </script>
+</body>
+</html>
